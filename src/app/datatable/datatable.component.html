@@ -1,0 +1,19 @@
+<div class="datatable">
+  <table>
+    <thead>
+    <tr>
+      <th>User Name</th>
+      <th>Problems Solved</th>
+      <th>Accuracy Rate</th>
+      <!-- Add more columns as needed -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.problemsSolved }}</td>
+      <td>{{ user.accuracyRate }}%</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
