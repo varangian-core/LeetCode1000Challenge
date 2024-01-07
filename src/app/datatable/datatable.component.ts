@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { LeetCodeService } from '../services/leetcode.service'; // Adjust the path as needed
+import { Component, OnInit } from '@angular/core';
+import { LeetCodeMockService } from '../services/leetcode-mock.service';
 
 @Component({
   selector: 'app-datatable',
@@ -7,16 +7,14 @@ import { LeetCodeService } from '../services/leetcode.service'; // Adjust the pa
   styleUrls: ['./datatable.component.css']
 })
 export class DataTableComponent implements OnInit {
-  @Input() users: any[] = [];
+  userStats: any;
 
-  constructor(private leetCodeService: LeetCodeService) { }
+  constructor(private leetCodeService: LeetCodeMockService) { }
 
   ngOnInit(): void {
-    // Fetch the users data when the component initializes
-    this.leetCodeService.getUsers().subscribe(data => {
-      this.users = data;
-    }, error => {
-      console.error('Error fetching users:', error);
+    const username = 'dummyUser';
+    this.leetCodeService.getUserData(username).subscribe(data => {
+      this.userStats = data;
     });
   }
 }

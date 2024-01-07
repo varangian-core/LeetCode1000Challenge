@@ -1,21 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-//TODO: need to implement the API here
+import { LeetCodeMockService } from '../services/leetcode-mock.service';
 
 @Component({
-  selector: 'app-main-page',
-  templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.css']
+  selector: 'app-datatable',
+  templateUrl: './datatable.component.html',
+  styleUrls: ['./datatable.component.css']
 })
-export class MainPageComponent implements OnInit {
-  // Define a property to hold the users data
-  users: any[] = [];
+export class DataTableComponent implements OnInit {
+  userStats: any;
 
-  constructor(private leetCodeService: LeetCodeService) { }
+  constructor(private leetCodeService: LeetCodeMockService) { }
 
   ngOnInit(): void {
-    // Fetch the users data when the component initializes
-    this.leetCodeService.getUsers().subscribe(data => {
-      this.users = data;
+    const username = 'dummyUser';
+    this.leetCodeService.getUserData(username).subscribe(data => {
+      this.userStats = data;
     });
   }
 }
