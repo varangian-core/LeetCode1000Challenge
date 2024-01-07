@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { LeetCodeMockService } from '../services/leetcode-mock.service';
+import { LeetCodeMockService } from '../services/leetcode-mock.service'; // Adjust the import path as needed
 
 @Component({
-  selector: 'app-datatable',
-  templateUrl: './datatable.component.html',
-  styleUrls: ['./datatable.component.css']
+  selector: 'app-main-page', // Corrected selector
+  templateUrl: './main-page.component.html', // Corrected template URL
+  styleUrls: ['./main-page.component.css'] // Corrected style URL
 })
-export class DataTableComponent implements OnInit {
+export class MainPageComponent implements OnInit { // Corrected class name
   userStats: any;
 
   constructor(private leetCodeService: LeetCodeMockService) { }
