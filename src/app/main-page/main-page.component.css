@@ -1,0 +1,17 @@
+.main-page-container {
+  font-family: 'Courier New', monospace;
+  color: #fff;
+  background-color: #1E1E1E;
+  padding: 20px;
+}
+
+.header-console {
+  background-color: #007ACC;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.console-text {
+  font-size: 1.2em;
+}

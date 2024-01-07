@@ -1,0 +1,23 @@
+.data-table-container {
+  background-color: #252526;
+  padding: 15px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.leetcode-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Courier New', monospace;
+  color: #D4D4D4;
+}
+
+.leetcode-table th, .leetcode-table td {
+  border: 1px solid #3C3C3C;
+  padding: 8px;
+  text-align: left;
+}
+
+.leetcode-table th {
+  background-color: #333333;
+}

@@ -1,34 +1,21 @@
-<div class="datatable">
-  <!-- Check if there are any users -->
-  <ng-container *ngIf="userStats; else noDataTemplate">
-    <table *ngIf="userStats.length > 0; else singleUserTemplate">
-      <thead>
-      <tr>
-        <th>User Name</th>
-        <th>Problems Solved</th>
-        <th>Accuracy Rate</th>
-        <!-- Add more columns as needed -->
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let user of userStats">
-        <td>{{ user.name }}</td>
-        <td>{{ user.problemsSolved }}</td>
-        <td>{{ user.accuracyRate }}%</td>
-        <!-- Add more data cells as needed -->
-      </tr>
-      </tbody>
-    </table>
-  </ng-container>
-
-  <!-- Template for single user -->
-  <ng-template #singleUserTemplate>
-    <p>User: {{ userStats.name }}</p>
-    <!-- Display other user details -->
-  </ng-template>
-
-  <!-- Template for no data -->
-  <ng-template #noDataTemplate>
-    <p>No user data available.</p>
-  </ng-template>
+<div class="data-table-container">
+  <table class="leetcode-table">
+    <thead>
+    <tr>
+      <th>Stat</th>
+      <th>Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Total Solved</td>
+      <td>{{ userStats.totalSolved }}</td>
+    </tr>
+    <tr>
+      <td>Easy Solved</td>
+      <td>{{ userStats.easySolved }}</td>
+    </tr>
+    <!-- More rows here -->
+    </tbody>
+  </table>
 </div>
